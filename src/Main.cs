@@ -1,0 +1,50 @@
+﻿using Hosihikari.PluginManager;
+using Hosihikari.ScriptLoader;
+
+[assembly: EntryPoint<Main>]
+
+namespace Hosihikari.ScriptLoader;
+
+internal class Main : IEntryPoint
+{
+    internal static readonly List<Plugin> s_plugins;
+
+    static Main()
+    {
+        s_plugins = new();
+    }
+
+    public void Initialize(AssemblyPlugin _plugin)
+    {
+        DirectoryInfo directoryInfo = new("plugins");
+        foreach (FileInfo file in directoryInfo.EnumerateFiles("*.lua"))
+        {
+            PythonPlugin plugin = new(file);
+            Manager.Load(plugin);
+        }
+        foreach (FileInfo file in directoryInfo.EnumerateFiles("*.ru"))
+        {
+            RubyPlugin plugin = new(file);
+            Manager.Load(plugin);
+        }
+        foreach (FileInfo file in directoryInfo.EnumerateFiles("*.py"))
+        {
+            LuaPlugin plugin = new(file);
+            Manager.Load(plugin);
+        }
+        foreach (FileInfo file in directoryInfo.EnumerateFiles("*.ts"))
+        {
+            TypeScriptPlugin plugin = new(file);
+            Manager.Load(plugin);
+        }
+
+        foreach (Plugin plugin in s_plugins)
+        {
+            if (string.IsNullOrWhiteSpace(plugin.Name))
+            {
+                throw new NullReferenceException();
+            }
+            Manager.Initialize(plugin.Name);
+        }
+    }
+}
