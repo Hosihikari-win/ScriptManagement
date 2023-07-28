@@ -8,12 +8,12 @@ public class RubyPlugin : Plugin
     {
     }
 
-    protected override bool Initialize()
+    protected override void Initialize()
     {
         throw new NotImplementedException();
     }
 
-    protected override bool Load()
+    protected override void Load()
     {
         throw new NotImplementedException();
     }
