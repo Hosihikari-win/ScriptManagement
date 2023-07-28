@@ -1,9 +1,9 @@
 ﻿using Hosihikari.PluginManager;
-using Hosihikari.ScriptLoader;
+using Hosihikari.ScriptManager;
 
 [assembly: EntryPoint<Main>]
 
-namespace Hosihikari.ScriptLoader;
+namespace Hosihikari.ScriptManager;
 
 internal class Main : IEntryPoint
 {

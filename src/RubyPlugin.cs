@@ -1,6 +1,6 @@
 ﻿using Hosihikari.PluginManager;
 
-namespace Hosihikari.ScriptLoader;
+namespace Hosihikari.ScriptManager;
 
 public class RubyPlugin : Plugin
 {

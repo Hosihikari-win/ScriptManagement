@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosihikari.ScriptLoader", "src\Hosihikari.ScriptLoader.csproj", "{A63F12F1-678E-454D-B10D-2A812814E693}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosihikari.ScriptManager", "src\Hosihikari.ScriptManager.csproj", "{A63F12F1-678E-454D-B10D-2A812814E693}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
