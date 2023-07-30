@@ -23,4 +23,3 @@ public class RubyPlugin : Plugin
         throw new NotImplementedException();
     }
 }
-

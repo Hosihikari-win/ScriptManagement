@@ -8,5 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Hosihikari.PluginManager" Version="1.0.2" />
+    <PackageReference Include="IronPython" Version="3.4.1" />
   </ItemGroup>
 </Project>

@@ -23,4 +23,3 @@ public class LuaPlugin : Plugin
         throw new NotImplementedException();
     }
 }
-
