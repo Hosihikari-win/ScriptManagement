@@ -1,6 +1,6 @@
-﻿using Hosihikari.PluginManager;
+﻿using Hosihikari.PluginManagement;
 
-namespace Hosihikari.ScriptManager;
+namespace Hosihikari.ScriptManagement;
 
 public class RubyPlugin : Plugin
 {

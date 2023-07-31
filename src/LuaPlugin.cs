@@ -1,7 +1,7 @@
-﻿using Hosihikari.PluginManager;
+﻿using Hosihikari.PluginManagement;
 using Neo.IronLua;
 
-namespace Hosihikari.ScriptManager;
+namespace Hosihikari.ScriptManagement;
 
 public class LuaPlugin : Plugin
 {

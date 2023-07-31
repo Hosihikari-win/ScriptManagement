@@ -1,8 +1,8 @@
-﻿using Hosihikari.PluginManager;
+﻿using Hosihikari.PluginManagement;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 
-namespace Hosihikari.ScriptManager;
+namespace Hosihikari.ScriptManagement;
 
 public class PythonPlugin : Plugin
 {
