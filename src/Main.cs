@@ -11,7 +11,7 @@ internal class Main : IEntryPoint
 
     static Main()
     {
-        s_plugins = new();
+        s_plugins = [];
     }
 
     public void Initialize(AssemblyPlugin _plugin)
@@ -29,18 +29,6 @@ internal class Main : IEntryPoint
             Manager.Load(plugin);
             s_plugins.Add(plugin);
         }
-        //foreach (FileInfo file in directoryInfo.EnumerateFiles("*.ts"))
-        //{
-        //    TypeScriptPlugin plugin = new(file);
-        //    Manager.Load(plugin);
-        //    s_plugins.Add(plugin);
-        //}
-        //foreach (FileInfo file in directoryInfo.EnumerateFiles("*.ru"))
-        //{
-        //    RubyPlugin plugin = new(file);
-        //    Manager.Load(plugin);
-        //    s_plugins.Add(plugin);
-        //}
 
         foreach (Plugin plugin in s_plugins)
         {
