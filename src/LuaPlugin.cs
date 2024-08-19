@@ -3,14 +3,9 @@ using Neo.IronLua;
 
 namespace Hosihikari.ScriptManagement;
 
-public class LuaPlugin : Plugin
+public class LuaPlugin(FileInfo fileInfo) : Plugin(fileInfo)
 {
     private LuaChunk? _luaChunk;
-
-    public LuaPlugin(FileInfo fileInfo) : base(fileInfo)
-    {
-        // Nothing need to prepare
-    }
 
     protected override void Initialize()
     {
@@ -24,7 +19,7 @@ public class LuaPlugin : Plugin
         {
             throw new NullReferenceException();
         }
-        _luaChunk.Run(new());
+        _luaChunk.Run([]);
     }
 
     protected override void Unload()

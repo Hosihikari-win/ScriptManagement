@@ -4,14 +4,9 @@ using Microsoft.Scripting.Hosting;
 
 namespace Hosihikari.ScriptManagement;
 
-public class PythonPlugin : Plugin
+public class PythonPlugin(FileInfo fileInfo) : Plugin(fileInfo)
 {
-    private readonly ScriptEngine _scriptEngine;
-
-    public PythonPlugin(FileInfo fileInfo) : base(fileInfo)
-    {
-        _scriptEngine = Python.CreateEngine();
-    }
+    private readonly ScriptEngine _scriptEngine = Python.CreateEngine();
 
     protected override void Initialize()
     {
